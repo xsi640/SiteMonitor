@@ -20,6 +20,7 @@ public class Site {
 	private String urlTemplate;
 	private Date createTime = new Date();
 	private Date lastCrawTime;
+	private int spiderSeconds;
 
 	private Spider maxPageSpider;
 	private Spider listUrlSpider;
@@ -71,6 +72,14 @@ public class Site {
 
 	public void setLastCrawTime(Date lastCrawTime) {
 		this.lastCrawTime = lastCrawTime;
+	}
+
+	public int getSpiderSeconds() {
+		return spiderSeconds;
+	}
+
+	public void setSpiderSeconds(int spiderSeconds) {
+		this.spiderSeconds = spiderSeconds;
 	}
 
 	public Spider getMaxPageSpider() {
