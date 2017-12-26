@@ -1,0 +1,8 @@
+/target/
+/.settings/
+.classpath
+.project
+.spring*
+*.xml
+logs/log-error.log
+*.log
