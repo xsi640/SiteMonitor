@@ -22,9 +22,9 @@ public class Site {
 	private Date lastCrawTime;
 	private int spiderSeconds;
 
-	private Spider maxPageSpider;
-	private Spider listUrlSpider;
-	private Map<String, Spider> metaDataSpider;
+	private MaxPageSpider maxPageSpider;
+	private ListSpider listUrlSpider;
+	private Map<String, PageSpider> metaDataSpider;
 
 	public String getId() {
 		return id;
@@ -82,27 +82,27 @@ public class Site {
 		this.spiderSeconds = spiderSeconds;
 	}
 
-	public Spider getMaxPageSpider() {
+	public MaxPageSpider getMaxPageSpider() {
 		return maxPageSpider;
 	}
 
-	public void setMaxPageSpider(Spider maxPageSpider) {
+	public void setMaxPageSpider(MaxPageSpider maxPageSpider) {
 		this.maxPageSpider = maxPageSpider;
 	}
 
-	public Spider getListUrlSpider() {
+	public ListSpider getListUrlSpider() {
 		return listUrlSpider;
 	}
 
-	public void setListUrlSpider(Spider listUrlSpider) {
+	public void setListUrlSpider(ListSpider listUrlSpider) {
 		this.listUrlSpider = listUrlSpider;
 	}
 
-	public Map<String, Spider> getMetaDataSpider() {
+	public Map<String, PageSpider> getMetaDataSpider() {
 		return metaDataSpider;
 	}
 
-	public void setMetaDataSpider(Map<String, Spider> metaDataSpider) {
+	public void setMetaDataSpider(Map<String, PageSpider> metaDataSpider) {
 		this.metaDataSpider = metaDataSpider;
 	}
 }

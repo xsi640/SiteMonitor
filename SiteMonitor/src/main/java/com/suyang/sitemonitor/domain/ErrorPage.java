@@ -1,19 +1,17 @@
 package com.suyang.sitemonitor.domain;
 
-import java.util.Date;
 import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 
-import com.mongodb.BasicDBObject;
 import com.poreader.common.UUIDUtils;
+import com.suyang.sitemonitor.domain.enums.PageType;
 
-public class Page {
+public class ErrorPage {
 	@Id
 	private String id = UUIDUtils.toString(UUID.randomUUID());
 	private String url;
-	private BasicDBObject metadata = new BasicDBObject();
-	private Date createTime = new Date();
+	private PageType type;
 	private String siteId;
 
 	public String getId() {
@@ -32,20 +30,12 @@ public class Page {
 		this.url = url;
 	}
 
-	public BasicDBObject getMetadata() {
-		return metadata;
+	public PageType getType() {
+		return type;
 	}
 
-	public void setMetadata(BasicDBObject metadata) {
-		this.metadata = metadata;
-	}
-
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
+	public void setType(PageType type) {
+		this.type = type;
 	}
 
 	public String getSiteId() {
@@ -55,4 +45,5 @@ public class Page {
 	public void setSiteId(String siteId) {
 		this.siteId = siteId;
 	}
+
 }

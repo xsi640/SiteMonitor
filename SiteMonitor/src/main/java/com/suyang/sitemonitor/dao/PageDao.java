@@ -7,5 +7,5 @@ import com.suyang.sitemonitor.domain.Page;
 
 @Repository
 public interface PageDao extends MongoRepository<Page, String> {
-
+	public Page findOneBySiteIdAndUrl(String siteId, String url);
 }
